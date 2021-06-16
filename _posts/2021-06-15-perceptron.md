@@ -15,7 +15,7 @@ mathjax: "true"
 The following is a sample project I completed for COVID-19 data from ourworldindata.org
 
 Here's the SQL code block:
-
+```
 /*
 The following information has been
 extracted from https://ourworldindata.org/covid-deaths as CSV
@@ -23,24 +23,22 @@ Statements Used: Joins, CTE's, Temp Tables, Windows Functions,
 Aggregate Functions, Creating Views, *Note* this data is accurate as
 of June 14, 2021.
 */
+```
 
 
-
-
+```
 -- Select all columns from the CovidDeaths table
 -- and order the resulting table by Location and Date
-'''
 SELECT 
 	*
 	FROM CovidDeaths
 	WHERE Continent IS NOT NULL 
 ORDER BY Location,Date
-'''
+```
 
 
-
+```
 -- SELECT base values for continued analysis
-'''
 SELECT 
 	Location AS [Location],
 	Date AS [Date],
@@ -51,10 +49,10 @@ SELECT
 	FROM CovidDeaths
 	WHERE Continent IS NOT NULL 
 ORDER BY Location,Date
-'''
+```
 
 
-'''
+```
 -- COVID-19 Total Cases Versus Total Deaths by country
 -- Using Like operator
 SELECT 
@@ -69,10 +67,10 @@ SELECT
 	WHERE Location LIKE '%states%'
 	AND Continent IS NOT NULL 
 ORDER BY Location,Date
-'''
+```
 
 
-'''
+```
 -- COVID-19 Total Cases Versus Total Deaths by country
 -- Using the exact name of the country of interest
 SELECT 
@@ -87,10 +85,10 @@ SELECT
 	WHERE Location = 'United States'
 	AND Continent IS NOT NULL 
 ORDER BY Location,Date
-'''
+```
 
 
-'''
+```
 -- Total Cases per country Population
 -- The percentage of the population infected with COVID-19
 SELECT 
@@ -100,10 +98,10 @@ SELECT
 	ROUND((total_cases/Population)*100,2) AS [Percentage Infected]
 	FROM CovidDeaths
 ORDER BY Location,Date
-'''
+```
 
 
-'''
+```
 -- Highest Infection Rate by countries
 SELECT 
 	Location AS [Location], 
@@ -113,10 +111,10 @@ SELECT
 	FROM CovidDeaths
 GROUP BY Location, Population
 ORDER BY [Max Population Infected] DESC
-'''
+```
 
 
-'''
+```
 -- Death count by country
 SELECT 
 	Location AS [Location], 
@@ -125,10 +123,10 @@ SELECT
 	WHERE Continent IS NOT NULL 
 GROUP BY Location
 ORDER BY [Death Count] DESC
-'''
+```
 
 
-'''
+```
 -- Breakdown by continent
 -- Death count by population
 SELECT 
@@ -138,10 +136,10 @@ SELECT
 	WHERE Continent IS NOT NULL 
 GROUP BY Continent
 ORDER BY [Death Count] DESC
-'''
+```
 
 
-'''
+```
 -- Global Numbers
 SELECT 
 	SUM(new_cases) AS [Total Cases], 
@@ -151,10 +149,10 @@ SELECT
 	WHERE Continent IS NOT NULL 
 
 ORDER BY [Total Cases],[Death Sum]
-'''
+```
 
 
-'''
+```
 -- Percentage of the population that is vaccinated
 -- Persons who have received at least one vaccination
 SELECT 
@@ -170,10 +168,10 @@ SELECT
 		AND cd.Date = cv.Date
 WHERE cd.Continent IS NOT NULL 
 ORDER BY Continent,Location
-'''
+```
 
 
-'''
+```
 -- Percentage of the population that is vaccinated
 -- using a CTE
 ;WITH Vaccination_CTE (Continent, 
@@ -199,10 +197,10 @@ AS
 	)
 SELECT *, ROUND(([Rolling Total Vaccinations]/Population)*100,2)
 FROM Vaccination_CTE
-'''
+```
 
 
-'''
+```
 -- Percentage of the population that is vaccinated
 -- using a CTE
 ;WITH VaccinationVariation_CTE AS
@@ -222,10 +220,10 @@ FROM Vaccination_CTE
 	)
 SELECT *, ROUND(([Rolling Total Vaccinations]/Population)*100,2)
 FROM VaccinationVariation_CTE
-'''
+```
 
 
-'''
+```
 -- Percentage of the population that is vaccinated
 -- using a temporary table
 DROP TABLE IF EXISTS #VaccinatedPopulationPercentage
@@ -254,10 +252,10 @@ SELECT
 
 SELECT *, ROUND((RollingPeopleVaccinated/Population)*100,2)
 FROM #VaccinatedPopulationPercentage
-'''
+```
 
 
-'''
+```
  --Percentage of the population that is vaccinated
  --using a view
 DROP VIEW IF EXISTS VaccinatedPopulationView;
@@ -277,7 +275,7 @@ SELECT
 	AND cd.Date = cv.Date
 	WHERE cd.Continent IS NOT NULL;
 GO
-'''
+```
 
 
 
