@@ -12,7 +12,7 @@ mathjax: "true"
 
 ### SQL Exploration
 
-The following is a sample project I completed for COVID-19 data from ourworldindata.org
+The following is a sample project I completed for COVID-19 data from [link](https://ourworldindata.org/covid-deaths)
 
 Below are blocks of SQL code for use in the exploration of the extracted csv file
 
