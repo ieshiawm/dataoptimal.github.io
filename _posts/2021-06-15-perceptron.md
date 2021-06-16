@@ -14,7 +14,15 @@ mathjax: "true"
 
 The following is a sample project I completed for COVID-19 data from ourworldindata.org
 
-Here's the SQL code block:
+Below are blocks of SQL code for use in the exploration of the extracted csv file
+
+
+
+
+
+
+
+:
 ```
 /*
 The following information has been
