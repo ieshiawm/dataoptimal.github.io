@@ -3,7 +3,7 @@ title: "COVID-19 SQL Project"
 date: 2021-06-15
 tags: [Data Analysis, SQL, COVID-19]
 header:
-  image: "/images/perceptron/2841_globezoom.jpg"
+  image: "/images/Coronavirus.jpg"
 excerpt: "Data Analysis, SQL, COVID-19"
 mathjax: "true"
 ---
@@ -15,20 +15,21 @@ mathjax: "true"
 The following is a sample project I completed for COVID-19 data from ourworldindata.org
 
 Here's the SQL code block:
-'''
+
 /*
 The following information has been
-exctracted from https://ourworldindata.org/covid-deaths as CSV
+extracted from https://ourworldindata.org/covid-deaths as CSV
 Statements Used: Joins, CTE's, Temp Tables, Windows Functions,
 Aggregate Functions, Creating Views, *Note* this data is accurate as
 of June 14, 2021.
 */
-'''
 
 
-'''
+
+
 -- Select all columns from the CovidDeaths table
 -- and order the resulting table by Location and Date
+'''
 SELECT 
 	*
 	FROM CovidDeaths
@@ -37,8 +38,9 @@ ORDER BY Location,Date
 '''
 
 
-'''
+
 -- SELECT base values for continued analysis
+'''
 SELECT 
 	Location AS [Location],
 	Date AS [Date],
