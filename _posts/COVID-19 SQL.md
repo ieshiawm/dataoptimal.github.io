@@ -1,9 +1,9 @@
 ---
-title: "Weather Pattern Project"
+title: "COVID-19 SQL Project"
 date: 2021-06-15
 tags: [Data Analysis, SQL, COVID-19]
 header:
-  image: "/images/perceptron/2841_globezoom.jpg"
+  image: "/images/Coronavirus.jpg"
 excerpt: "Data Analysis, SQL, COVID-19"
 mathjax: "true"
 ---
