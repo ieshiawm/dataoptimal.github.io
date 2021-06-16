@@ -1,5 +1,5 @@
 ---
-title: "Weather Pattern Project"
+title: "COVID-19 SQL Project"
 date: 2021-06-15
 tags: [Data Analysis, SQL, COVID-19]
 header:
