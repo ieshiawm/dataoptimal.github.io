@@ -59,5 +59,5 @@ GROUP BY Location, Population, Date
 ORDER BY [Percent Infected] DESC
   ```
   
-[https://public.tableau.com/views/COVID-19Dashboard_16238961337830/Dashboard1?:language=en-US&:display_count=n&:origin=viz_share_link]
+[<img src="{{ site.url }}{{ site.baseurl }}/images/Tableau Dashboard.PNG">
 
