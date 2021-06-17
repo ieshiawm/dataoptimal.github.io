@@ -4,7 +4,7 @@ date: 2021-05-31
 tags: [Data Analysis, Excel, Visualization]
 header:
   image: "/images/perceptron/2841_globezoom.jpg"
-excerpt: "Data Analysis, Excel, Visualization, Perceptron"
+excerpt: "Data Analysis, Excel, Visualization"
 mathjax: "true"
 ---
 
