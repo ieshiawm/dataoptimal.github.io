@@ -58,8 +58,10 @@ SELECT
 GROUP BY Location, Population, Date
 ORDER BY [Percent Infected] DESC
   ```
-  
+ 
+ **A screenshot of the resulting dashboard**
 <img src="{{ site.url }}{{ site.baseurl }}/images/Tableau Dashboard.PNG">
 
+**Which can be viewed by following the link below:**
 [Tableau Dashboard](https://public.tableau.com/views/COVID-19Dashboard_16238961337830/Dashboard1?:language=en-US&:retry=yes&:display_count=n&:origin=viz_share_link)
 
