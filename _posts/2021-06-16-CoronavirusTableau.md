@@ -3,7 +3,7 @@ title: "COVID-19 Tableau Dashboard"
 date: 2021-06-16
 tags: [Data Analysis, Tableau, Visualization, COVID-19, Coronavirus]
 header:
-  image: "/images/Covid Variant.png"
+  image: "/images/Covid Variant.jpg"
 excerpt: "Data Analysis, Tableau, Visualization, Coronavirus"
 mathjax: "true"
 ---
